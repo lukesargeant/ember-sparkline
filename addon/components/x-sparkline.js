@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
 import layout from '../templates/components/x-sparkline';
 
 const makeMapFn = function(viewRange, dataStart, dataEnd, padding = 0) {
@@ -52,7 +53,7 @@ export default Component.extend({
    * Depending on your layout, you may need to manage chart width yourself and pass it in.
    * @return {number}
    */
-  width: Ember.computed(function() {
+  width: computed(function() {
     return parseInt(window.getComputedStyle(this.element).width);
   }).volatile(),
 
@@ -60,7 +61,7 @@ export default Component.extend({
    * Depending on your layout, you may need to manage chart height yourself and pass it in.
    * @return {number}
    */
-  height: Ember.computed(function() {
+  height: computed(function() {
     return parseInt(window.getComputedStyle(this.element).height);
   }).volatile(),
 
