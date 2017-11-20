@@ -1,0 +1,7 @@
+{{#if myPoints}}
+  {{yield myPoints}}
+{{else if isError}}
+  <div class="error">
+    No data received from alphavantage.co
+  </div>
+{{/if}}
