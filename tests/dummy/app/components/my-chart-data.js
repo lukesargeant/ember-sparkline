@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import run from '@ember/run';
 import layout from '../templates/components/my-chart-data';
 
 export default Component.extend({
@@ -20,7 +21,7 @@ export default Component.extend({
           return response.json();
         }
     }).then((data) => {
-      Ember.run(() => {
+      run(() => {
         try {
           let byTime = data['Time Series (5min)'];
           const viewData = Object.keys(byTime).map((key) => parseFloat(byTime[key]['4. close']));
