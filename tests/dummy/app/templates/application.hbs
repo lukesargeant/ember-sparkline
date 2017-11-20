@@ -1,3 +1,15 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+{{#each markets as |market|}}
+  <div class="market">
+    <img class="market_logo {{if market.imageLoaded 'market_logo--loaded'}}"
+      onload={{action (mut market.imageLoaded) true}}
+      src="//logo.clearbit.com/{{market.website}}?size=84"/>
+    {{#my-chart-data symbol=market.symbol as |myPoints|}}
+      {{#my-sparkline-styles points=myPoints as |strokeStyle gradientStart gradientEnd|}}
+        {{x-sparkline class="my-sparkline" points=myPoints
+          strokeStyle=strokeStyle
+          gradientStart=gradientStart
+          gradientEnd=gradientEnd}}
+      {{/my-sparkline-styles}}
+    {{/my-chart-data}}
+  </div>
+{{/each}}
