@@ -32,9 +32,9 @@ deploy:
   provider: npm
   email: lukesarge@gmail.com
   skip_cleanup: true
-  tag: next
   api_key:
     secure: qLO+wAOwoAHSFIQ6f7v5i49UQATHphPAojEIuWb96hZt/mbqFw5asXwsBLKdX7/Rt0tsaeKFefdG4N1DLxpK2nHP7Cwhh/tT/ZcxmkWuUxlnVSlF0ZwvnQbWEAXrPiVsM8tQsLZFpvOdhWUN2UTPkAnmWt0PytjsW5DtxHm1bhg+p1kvbAxs7rsBHwZr+OCPfVubmmMl8GiDhFO7QHPd3lJmKKGERFpYErc+oeMHjhAYnTpKk0TPqxXrvns4JVkJi7yjnddgQlJtgoynNEh4Jf0itDhXZoDpFj7BkFWijQ+mTYPm7hxJmB5K7XCZEMtVZBDLnBueOdvqG8CsIGverLlasH9NNWBKZxk3LXdCNX2JGobjPteeH1/GosoT+6qxGYJSRFYNK1fqrRf5fL5EDlMGQ0xDK6yFL3nkEOjOj6D0eAjkkMGpODRTyY3gVtLufh/O70zcubTKFyIjMeE1YrA0XsqJAWhCxbCUV9DIh0CL9dQJ+91zm/R1bphJdfDB3Dblz+MrryuhEbq/0xwTYsT4E0TUVFwNDWhbSODY6HvBaJyYtVZFiy7KjnZy0Am+2iFQmBkn/IO6HM1PoPhufxEOp+V+va5oZQd4teRHYGipXnlqdHxsbB0vMht+PQhPgXwBKdzBH7VRw/bSvsX6nxWAYGJQtXVTvxtSlZqVVps=
   on:
-    all_branches: true
     condition: "$EMBER_TRY_SCENARIO = 'ember-default'"
+    tags: true
+    branch: master
