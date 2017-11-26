@@ -1,4 +1,4 @@
-# ember-sparkline
+# ember-sparkline [![Build Status](https://travis-ci.org/lukesargeant/ember-sparkline.svg?branch=master)](https://travis-ci.org/lukesargeant/ember-sparkline)
 
 This Ember Addon provides the x-sparkline component. Given an array of numbers, it
 draws a line chart and an area chart using an html5 canvas. A subset of styles
