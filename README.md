@@ -4,16 +4,48 @@ This Ember Addon provides the x-sparkline component. Given an array of numbers, 
 draws a line chart and an area chart using an html5 canvas. A subset of styles
 can be passed in.
 
-The dummy app illustrates how to transform appropriate data and how to rig up
-styling.
+## Installation
+
+`ember install ember-sparkline`
+
+## Usage
+
+First, setup some data.
+
+```js
+export default Route.extend({
+  model() {
+    return [1, 2, 3, 7, 20, 13, 2, -10, 5, 12];
+  }
+});
+```
+
+Declare a sparkline component in your template, passing in points.
+
+```hbs
+<h1>My Sparkline</h1>
+{{x-sparkline points=model class="my-sparkline"}}
+```
+
+Create some styles to size its dimensions.
+
+```css
+.my-sparkline {
+  width: 100px;
+  height: 100px;
+}
+```
 
 x-sparkline simply draws an array of numbers, assuming the interval between each
 point is the same. This means you can't draw a chart for data with non regular
 intervals in the x axis.
 
-Also note, you cannot provide a view range. Every point in the points array will
-be drawn. If you only want to render a section of your data set, you'll need to
-prepare/transform this in a wrapping component or your route.
+The dummy app illustrates how you could transform appropriate data and rig up
+styling.
+
+Also note, you cannot provide a separate view range. Every point in the points
+array will be drawn. If you only want to render a section of your data set,
+you'll need to prepare/transform this in a wrapping component or your route.
 
 ## API
 
@@ -56,9 +88,9 @@ gradientEnd: 'rgba(180, 230, 255, 0)',
 vPad: 4,
 ```
 
-## Installation
+## Contributing to this project
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/lukesargeant/ember-sparkline.git`
 * `cd ember-sparkline`
 * `npm install`
 
