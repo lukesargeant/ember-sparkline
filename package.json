@@ -1,6 +1,6 @@
 {
   "name": "ember-sparkline",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This Ember Addon provides the x-sparkline component. Given an array of numbers, it draws a line and area chart using an html5 canvas. An API is provided to style the chart.",
   "keywords": [
     "ember-addon"
